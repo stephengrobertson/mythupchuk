@@ -52,8 +52,8 @@ $opt{fileupdate} = 0;
 $opt{dbupdate}   = 0;
 $opt{commit}     = 0;
 $opt{help}       = 0;
-$opt{bbc1}       = 'south';
-$opt{bbc2}       = 'england';
+$opt{bbc1}       = 'scotland';
+$opt{bbc2}       = 'scotland';
 $opt{itv}        = 'meridian';
 
 my $GetOptionsResult = GetOptions (\%opt,
@@ -603,7 +603,7 @@ sub hackit {
         # Return this name:                     if the name matches this pattern:
         return 'itv1meridian'                   if /^itv1meridian/; # ignore trailing 'S' etc.
         return 'itv1+1(meridian/anglia)'        if /^itv1\+1$/;     # Note: other ITV1+1's aren't helpfully named
-        return 'itv1hd(meridian/anglia)'        if /^itv1hd$/;      # Note: ditto
+        return 'itv1hd(london/lwt)'        if /^itv1hd$/;      # Note: ditto
         return 'cbbc'                           if /^cbbc/;         # ignore trailing 'channel'
         return 'bbcparliament'                  if /^bbcparl/;      # ignore ' etc.
         return 'aljazeeraenglish'               if /^aljazeeraeng$/; # There's a separate freeview one
